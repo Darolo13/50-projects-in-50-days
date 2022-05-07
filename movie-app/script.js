@@ -37,6 +37,7 @@ function showMovies(movies) {
     `;
     main.appendChild(movieEl);
   })
+
 };
 
 function getClassByRate(vote) {
