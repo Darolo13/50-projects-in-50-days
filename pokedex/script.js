@@ -21,7 +21,7 @@ const main_types = Object.keys(colors);
 
 const fetchPokemons = async () => {
   for (let i = 1; i <= pokemon_count; i++) {
-    await getPokemon();
+    await getPokemon(i);
   }
 }
 
@@ -37,8 +37,8 @@ const createPokemonCard = (pokemon) => {
   const pokemonEl = document.createElement('div');
   pokemonEl.classList.add('pokemon');
 
-  const id = pokemon.id.toString().padStart(3, '0');
   const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+  const id = pokemon.id.toString().padStart(3, '0');
 
   const poke_types = pokemon.types.map(pokemon => pokemon.type.name);
   const type = main_types.find(type => poke_types.indexOf(type) > -1);
