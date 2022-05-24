@@ -29,7 +29,14 @@ function addTodo(todo) {
     todoEl.innerText = todoText;
 
     todoEl.addEventListener('click', () => {
-      todo.classList.toggle('completed');
+      todoEl.classList.toggle('completed');
+      updateLS();
+    })
+
+    todoEl.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+
+      todoEl.remove();
       updateLS();
     })
 
