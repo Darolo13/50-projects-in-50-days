@@ -2,4 +2,4 @@
 Sharpen my skills by building 50 quick, unique &amp; fun mini projects.
 
 ## Date of completion
-May 23 2022
+May - 23 - 2022
